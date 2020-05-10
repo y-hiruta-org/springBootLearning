@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.lsstyle.y.hiruta.mapper.MSkillMapper">
+  <select id="findByPrimaryKey" parameterType="jp.co.lsstyle.y.hiruta.entity.MSkill" resultType="jp.co.lsstyle.y.hiruta.entity.MSkill">
+	SELECT
+	SKILL_ID
+	,TEKIYO_STR_DAY
+	,TEKIYO_END_DAY
+	,SORT_JUN
+	,SKILL_GP_ID
+	,SKILL_NM
+	,SKILL_KATI_KBN
+	,INS_DATE
+	,INS_USER_ID
+	,UPD_DATE
+	,UPD_USER_ID
+	from m_skill
+	where SKILL_ID = #{skillId}
+	and #{tekiyoStrDay} BETWEEN TEKIYO_STR_DAY AND TEKIYO_END_DAY;
+
+  </select>
+
+  <select id="findByPrimaryKey2" parameterType="jp.co.lsstyle.y.hiruta.entity.MSkill" resultType="java.lang.Integer">
+	SELECT count(1) as cnt
+	from m_skill
+	where SKILL_ID = #{skillId}
+	and #{tekiyoStrDay} BETWEEN TEKIYO_STR_DAY AND TEKIYO_END_DAY;
+
+  </select>
+
+</mapper>

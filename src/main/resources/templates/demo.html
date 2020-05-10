@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/TopMenu_Sub.css" th:href="@{/css/TopMenu_Sub.css}" rel="stylesheet"></link>
+<link rel="stylesheet" href="webjars/bootstrap/4.1.1/css/bootstrap.min.css" />
+<script type="text/javascript" th:src="@{/js/WebComponent.js}"></script>
+<script src="webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" th:src="@{/com/common_prj.js}"></script>
+<script type="text/javascript" th:src="@{/demo.js}"></script>
+<script>
+$(function() {
+  // 「id="jq"」の背景を黄色に
+  $('#jq').css('background-color', 'Yellow');
+});
+</script>
+<title>demo</title>
+</head>
+<body>
+
+
+<form action="http://localhost:8080/TopMenu">
+  <p class="text-danger" >デモページです。</p>
+
+<ul id="list">
+  <li id="docker">プログラマのためのDocker教科書</li>
+  <li id="js">JavaScript逆引きレシピ</li>
+  <li id="android">アプリを作ろう！　Android入門ですよね</li>
+  <li id="jq">10日でおぼえるjQuery入門教室 第2版</li>
+  <li id="ecma">速習 ECMAScript 6</li>
+</ul>
+
+	<input type="submit" value="TOPメニューへ戻る">
+	<input type="button" value="ボタン">
+	<button class="btnNext" data-action="next" data-method="POST" value="btnNext">次画面</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.main-header,.content-wrapper,.main-footer {
+    margin-left: 10px !important;
+}
+
+.bg-content {
+	background-color: #FFFFCC
+}

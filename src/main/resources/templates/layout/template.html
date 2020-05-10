@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout (title,body)">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--/* 各ビュータイトル */-->
+  <title th:text="${title}">Spring boot de Hello world!</title>
+
+  <!--/* 必ず読み込むファイル */-->
+  <link th:href="@{/webjars/bootstrap/4.1.1/css/bootstrap.min.css}" rel="stylesheet" />
+  <link th:href="@{/plugins/fontawesome-free/css/all.min.css}" rel="stylesheet" />
+  <link th:href="@{/dist/css/adminlte.min.css}" rel="stylesheet" />
+  <link th:href="@{/com/common_prj.css}" rel="stylesheet" />
+  <!--/* 固有で読み込むリンク */-->
+<!--   <th:block th:replace="${links}" /> -->
+  <title th:replace="${title}"></title>
+</head>
+<body class="hold-transition sidebar-mini">
+	<div class="wrapper">
+
+	    <div id="header" th:replace="~{layout/header :: header}"></div>
+	    <div id="body" th:replace="${body}"></div>
+	    <div id="footer" th:replace="~{layout/footer :: footer}"></div>
+		<!-- jQuery -->
+		<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+		<script th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+		<!-- Bootstrap 4 -->
+		<!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+		<script th:src="@{/webjars/bootstrap/4.1.1/js/bootstrap.min.js}"></script>
+
+		<!-- AdminLTE App -->
+		<script th:src="@{/dist/js/adminlte.min.js}"></script>
+	</div>
+</body>
+</html>

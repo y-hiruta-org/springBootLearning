@@ -1,0 +1,35 @@
+<html
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--/* 必ず読み込むファイル */-->
+  <link th:href="@{/webjars/bootstrap/4.1.1/css/bootstrap.min.css}" rel="stylesheet" />
+  <link th:href="@{/plugins/fontawesome-free/css/all.min.css}" rel="stylesheet" />
+  <link th:href="@{/dist/css/adminlte.min.css}" rel="stylesheet" />
+  <link th:href="@{/com/common_prj.css}" rel="stylesheet" />
+  <!--/* 固有で読み込むリンク */-->
+<!--   <th:block th:replace="${links}" /> -->
+  <title>共通タイトル</title>
+</head>
+<body class="hold-transition sidebar-mini">
+	<div class="wrapper">
+
+	    <div id="header" th:replace="~{layout/header :: header}"></div>
+		<div layout:fragment="contents"></div>
+	    <div id="footer" th:replace="~{layout/footer :: footer}"></div>
+		<!-- jQuery -->
+		<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+		<script th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+		<!-- Bootstrap 4 -->
+		<!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+		<script th:src="@{/webjars/bootstrap/4.1.1/js/bootstrap.min.js}"></script>
+
+		<!-- AdminLTE App -->
+		<script th:src="@{/dist/js/adminlte.min.js}"></script>
+	</div>
+</body>
+</html>

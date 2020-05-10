@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/TopMenu_Sub.css" th:href="@{/css/TopMenu_Sub.css}" rel="stylesheet"></link>
+<link th:href="@{/webjars/bootstrap/4.1.1/css/bootstrap.min.css}" rel="stylesheet" />
+<script type="text/javascript" th:src="@{/js/WebComponent.js}"></script>
+<title>demo(db)</title>
+</head>
+<body>
+	<form action="" th:object="${demoDbForm}">
+	  ID:<input type="text"  th:field="*{skillId}" />
+	  NAME:<input type="text"  th:field="*{skillNm}" />
+	  <button type="button" class="btn btn-primary">Primary</button>
+	</form>
+</body>
+</html>
